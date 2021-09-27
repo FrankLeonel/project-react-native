@@ -6,7 +6,8 @@
 - [ ] Concluído Parcial
 - [ ] Não Concluído
 
-https://user-images.githubusercontent.com/49029488/134953073-6ffa1567-e3ab-4b87-bd0e-2c0206d5cfa0.mp4
+
+![pesquisa](https://user-images.githubusercontent.com/49029488/134953641-3b755911-3e53-4541-b873-308d565d63e2.gif)
 
 
 ### 2. Implementar as sessões disponíveis para um determinado filme
@@ -14,7 +15,7 @@ https://user-images.githubusercontent.com/49029488/134953073-6ffa1567-e3ab-4b87-
 - [ ] Concluído Parcial
 - [ ] Não Concluído
 
-https://user-images.githubusercontent.com/49029488/134953115-6a0537f0-41c3-401b-8288-10460faf4e69.mp4
+![informationDay](https://user-images.githubusercontent.com/49029488/134953678-d595f42c-4a28-4ee4-8ae0-e8ad9eba3391.gif)
 
 
 ## Desafios bônus
