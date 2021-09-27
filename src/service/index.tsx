@@ -40,13 +40,6 @@ export interface InformationDay {
   rooms: Rooms[];
 }
 
-export interface City {
-  cityId: string;
-  cityName: string;
-}
-
-export const getCities = () => api.get('/cities');
-
 export const getMovies = () => api.get('/movies');
 
 export const getInformationDay = (movieId: string, date: string) =>

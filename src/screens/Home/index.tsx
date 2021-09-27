@@ -1,7 +1,6 @@
-import { Picker } from '@react-native-picker/picker';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
-import { FlatList, StyleSheet, View, Text } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 import ErrorContent from '../../components/ErrorContent';
 import Loading from '../../components/Loading';
 import MovieListItem from '../../components/MovieListItem';
@@ -47,8 +46,6 @@ const styles = StyleSheet.create({
 
 const Home = ({ navigation }: Props) => {
   const [loading, setLoading] = useState(false);
-  const [citeis, setCiteis] = useState<api.City[]>([]);
-  const [selectedValue, setSelectedValue] = useState('');
   const [movies, setMovies] = useState<api.Movie[]>([]);
   const [error, setError] = useState(null);
   const [searchText, setSearchText] = useState('');
@@ -68,7 +65,6 @@ const Home = ({ navigation }: Props) => {
     setLoading(true);
     setSearchText('');
     loadMovies();
-    api.getCities().then(response => setCiteis(response.data));
   }, []);
 
   const updateSearch = (search: string) => {
@@ -93,17 +89,6 @@ const Home = ({ navigation }: Props) => {
   return (
     <View style={styles.container}>
       <Search value={searchText} onChange={text => updateSearch(text)} />
-
-      <View style={styles.containerPicker}>
-        <Text style={styles.textPicker}>Selecione uma cidade: </Text>
-        <Picker
-          selectedValue={selectedValue}
-          onValueChange={itemValue => setSelectedValue(itemValue)}>
-          {citeis.map(city => (
-            <Picker.Item label={city.cityName} />
-          ))}
-        </Picker>
-      </View>
 
       {!searchMovies.length ? (
         <ErrorContent
